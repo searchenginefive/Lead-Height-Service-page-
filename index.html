@@ -275,6 +275,19 @@ fieldset.field{border:0;padding:0;margin:0 0 14px}
 @media (max-width:900px){.final-grid{grid-template-columns:1fr}}
 @media (max-width:520px){.f-row{grid-template-columns:1fr}.form{padding:24px}}
 
+/* ===== Explore navigation panel (sits above the footer, part of the page content) ===== */
+.explore-nav{background:#FCF8EC;padding:56px 0 64px;color:#1A1D3A}
+.explore-nav .group{margin-bottom:34px}
+.explore-nav .group:last-child{margin-bottom:0}
+.explore-nav .title{font-weight:900;font-size:1.25rem;text-transform:uppercase;letter-spacing:.01em;margin:0 0 10px;line-height:1.3}
+.explore-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;row-gap:6px}
+.explore-nav li{display:inline-flex;align-items:center;font-size:1.02rem;line-height:1.6}
+.explore-nav li:not(:last-child)::after{content:"";width:2px;height:1.15em;background:#FD5300;margin:0 18px;border-radius:2px}
+.explore-nav a{color:#1A1D3A;text-decoration:none}
+.explore-nav a:hover{color:#FD5300;text-decoration:underline;text-underline-offset:3px}
+.explore-nav .caps a{text-transform:uppercase}
+@media (max-width:620px){.explore-nav li{font-size:.95rem}.explore-nav li:not(:last-child)::after{margin:0 12px}.explore-nav .title{font-size:1.08rem}}
+
 /* ===== Footer (preview stand-in for the theme footer) ===== */
 .site-footer{background:var(--plum);color:rgba(255,255,255,.8);padding:48px 0 calc(28px + env(safe-area-inset-bottom,0px));font-size:.95rem}
 .site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
@@ -801,6 +814,68 @@ fieldset.field{border:0;padding:0;margin:0 0 14px}
 </section>
 
 </main>
+
+<!-- EXPLORE NAVIGATION PANEL: place directly above the site footer.
+     Links marked in the delivery notes as "planned" point to slugs that don't exist on leadheight.com yet.
+     Publish those pages (or change the hrefs) before going live, to avoid broken links. -->
+<nav class="explore-nav" aria-label="Explore services, locations and industries">
+  <div class="wrap">
+    <div class="group">
+      <p class="title" id="xn-services">Trending Services</p>
+      <ul aria-labelledby="xn-services" class="caps">
+        <li><a href="https://leadheight.com/search-engine-optimization/">SEO Services</a></li>
+        <li><a href="https://leadheight.com/local-seo/">Local SEO Services</a></li>
+        <li><a href="https://leadheight.com/google-ads/">Google Ads Services</a></li>
+        <li><a href="https://leadheight.com/social-media-marketing/">Social Media Marketing</a></li>
+        <li><a href="https://leadheight.com/website-development/">Website Development</a></li>
+        <li><a href="https://leadheight.com/performance-marketing/">Performance Marketing</a></li>
+        <li><a href="https://leadheight.com/lead-generation/">Lead Generation</a></li>
+        <li><a href="https://leadheight.com/content-marketing/">Content Marketing</a></li>
+        <li><a href="https://leadheight.com/e-commerce-seo/">E-commerce SEO</a></li>
+        <li><a href="https://leadheight.com/technical-seo/">Technical SEO</a></li>
+      </ul>
+    </div>
+    <div class="group">
+      <p class="title" id="xn-locations">Trending Locations</p>
+      <ul aria-labelledby="xn-locations">
+        <li><a href="https://leadheight.com/seo-services-in-kolkata/">SEO Services in Kolkata</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-delhi/">SEO Services in Delhi</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-mumbai/">SEO Services in Mumbai</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-bengaluru/">SEO Services in Bengaluru</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-chennai/">SEO Services in Chennai</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-hyderabad/">SEO Services in Hyderabad</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-pune/">SEO Services in Pune</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-ahmedabad/">SEO Services in Ahmedabad</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-jaipur/">SEO Services in Jaipur</a></li>
+        <li><a href="https://leadheight.com/seo-services-in-lucknow/">SEO Services in Lucknow</a></li>
+      </ul>
+    </div>
+    <div class="group">
+      <p class="title" id="xn-kolkata">Other Digital Marketing Services in Kolkata</p>
+      <ul aria-labelledby="xn-kolkata">
+        <li><a href="https://leadheight.com/local-seo-in-kolkata/">Local SEO in Kolkata</a></li>
+        <li><a href="https://leadheight.com/google-ads-in-kolkata/">Google Ads in Kolkata</a></li>
+        <li><a href="https://leadheight.com/website-development-in-kolkata/">Website Development in Kolkata</a></li>
+        <li><a href="https://leadheight.com/social-media-marketing-in-kolkata/">Social Media Marketing in Kolkata</a></li>
+        <li><a href="https://leadheight.com/lead-generation-in-kolkata/">Lead Generation in Kolkata</a></li>
+        <li><a href="https://leadheight.com/performance-marketing-in-kolkata/">Performance Marketing in Kolkata</a></li>
+        <li><a href="https://leadheight.com/content-marketing-in-kolkata/">Content Marketing in Kolkata</a></li>
+      </ul>
+    </div>
+    <div class="group">
+      <p class="title" id="xn-industries">Industries We Serve</p>
+      <ul aria-labelledby="xn-industries">
+        <li><a href="https://leadheight.com/real-estate-marketing/">Real Estate Marketing</a></li>
+        <li><a href="https://leadheight.com/healthcare-marketing/">Healthcare Marketing</a></li>
+        <li><a href="https://leadheight.com/e-commerce-marketing/">E-commerce Marketing</a></li>
+        <li><a href="https://leadheight.com/education-marketing/">Education Marketing</a></li>
+        <li><a href="https://leadheight.com/hospitality-marketing/">Hospitality Marketing</a></li>
+        <li><a href="https://leadheight.com/saas-marketing/">SaaS Marketing</a></li>
+        <li><a href="https://leadheight.com/manufacturing-marketing/">Manufacturing Marketing</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- FOOTER: preview stand-in. Remove when placing inside the WordPress theme. -->
 <footer class="site-footer">
